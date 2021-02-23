@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "backend": "nodemon backend --exec",
+    "frontend":"nodemon --watch dist --exec http-server dist/samplecode",
+    "start": "(start npm run frontend && start npm run backend) || (npm run frontend & npm run backend)",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
